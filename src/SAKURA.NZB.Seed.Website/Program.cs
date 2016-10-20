@@ -23,7 +23,7 @@ namespace SAKURA.NZB.Seed.Website
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-				.UseUrls("http://*:7424/")
+				.UseUrls("http://*:8080/")
                 .Build();
 
             host.Run();
