@@ -30,10 +30,10 @@ namespace SAKURA.NZB.Seed.Data
 		{
 			modelBuilder.ForSqlServerUseIdentityColumns();
 
-			modelBuilder.Entity<OrderProduct>()
-				.HasOne(x => x.Product)
-				.WithOne()
-				.OnDelete(DeleteBehavior.Restrict);
+			//modelBuilder.Entity<OrderProduct>()
+			//	.HasOne(x => x.Product)
+			//	.WithOne()
+			//	.OnDelete(DeleteBehavior.Restrict);
 
 			base.OnModelCreating(modelBuilder);
 		}

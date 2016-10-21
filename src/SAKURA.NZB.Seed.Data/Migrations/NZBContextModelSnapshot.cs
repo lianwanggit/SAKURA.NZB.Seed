@@ -209,8 +209,7 @@ namespace SAKURA.NZB.Seed.Data.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasIndex("ProductId");
 
                     b.ToTable("OrderProduct");
                 });
@@ -347,8 +346,9 @@ namespace SAKURA.NZB.Seed.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SAKURA.NZB.Seed.Domain.Product", "Product")
-                        .WithOne()
-                        .HasForeignKey("SAKURA.NZB.Seed.Domain.OrderProduct", "ProductId");
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SAKURA.NZB.Seed.Domain.Product", b =>

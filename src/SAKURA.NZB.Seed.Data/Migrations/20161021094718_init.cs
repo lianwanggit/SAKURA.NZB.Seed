@@ -252,7 +252,7 @@ namespace SAKURA.NZB.Seed.Data.Migrations
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -295,8 +295,7 @@ namespace SAKURA.NZB.Seed.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_OrderProduct_ProductId",
                 table: "OrderProduct",
-                column: "ProductId",
-                unique: true);
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_BrandId",

@@ -8,7 +8,7 @@ using SAKURA.NZB.Seed.Data;
 namespace SAKURA.NZB.Seed.Data.Migrations
 {
     [DbContext(typeof(NZBContext))]
-    [Migration("20161020105320_init")]
+    [Migration("20161021094718_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -210,8 +210,7 @@ namespace SAKURA.NZB.Seed.Data.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasIndex("ProductId");
 
                     b.ToTable("OrderProduct");
                 });
@@ -348,8 +347,9 @@ namespace SAKURA.NZB.Seed.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SAKURA.NZB.Seed.Domain.Product", "Product")
-                        .WithOne()
-                        .HasForeignKey("SAKURA.NZB.Seed.Domain.OrderProduct", "ProductId");
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SAKURA.NZB.Seed.Domain.Product", b =>
