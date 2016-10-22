@@ -6,6 +6,8 @@
     "Hangfire.Core": "1.6.0-build-02111",
     "Hangfire.SqlServer": "1.6.0-build-02111",
     "Hangfire.AspNetCore": "1.6.0-build-02111",
+    "Scrutor": "1.6.0",
+    "MediatR": "2.0.2",
     "SAKURA.NZB.Seed.Data": "1.0.0-*"
   },
 

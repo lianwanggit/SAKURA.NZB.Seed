@@ -15,7 +15,8 @@ namespace SAKURA.NZB.Seed.Business
 
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddDatabase(_config);
+			services.AddDatabase(_config)
+				.AddMediator();
 		}
 
 	}
