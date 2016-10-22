@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace SAKURA.NZB.Seed.Data
 {
+	/// <summary>
+	/// For dotnet ef command line
+	/// </summary>
 	public class Startup
     {
 		public static void Main(string[] args)

@@ -3,6 +3,9 @@
 
   "dependencies": {
     "NETStandard.Library": "1.6.0",
+    "Hangfire.Core": "1.6.0-build-02111",
+    "Hangfire.SqlServer": "1.6.0-build-02111",
+    "Hangfire.AspNetCore": "1.6.0-build-02111",
     "SAKURA.NZB.Seed.Data": "1.0.0-*"
   },
 
